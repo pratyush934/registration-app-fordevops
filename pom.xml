@@ -17,8 +17,8 @@
     <!-- ===================== -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>8</java.version>
-        <maven.compiler.release>8</maven.compiler.release>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
     <!-- ===================== -->
@@ -36,13 +36,6 @@
         <dependencies>
 
             <!-- Servlet APIs -->
-           <dependency>
-             <groupId>org.mockito</groupId>
-             <artifactId>mockito-core</artifactId>
-             <version>5.11.0</version>
-             <scope>test</scope>
-           </dependency>
-
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
@@ -72,6 +65,13 @@
                 <scope>test</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>5.11.0</version>
+                <scope>test</scope>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -82,16 +82,11 @@
         <pluginManagement>
             <plugins>
 
-               <plugin>
-                      <groupId>org.apache.maven.plugins</groupId>
-                      <artifactId>maven-compiler-plugin</artifactId>
-                      <version>3.11.0</version>
-                      <configuration>
-                          <source>8</source>
-                          <target>8</target>
-                      </configuration>
-              </plugin>
-
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
